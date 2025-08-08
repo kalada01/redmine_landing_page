@@ -1,0 +1,29 @@
+<p>
+  <label for="settings_redirect_config_json">User/Group/Language redirect map (JSON):</label><br />
+  <%= text_area_tag 'settings[redirect_config_json]', h(@settings['redirect_config_json']), 
+                  rows: 25, cols: 100, style: 'width: 100%; font-family: monospace;' %>
+</p>
+
+<p>
+<br/><strong>Enter the configu for redirection in JSON form. Example:</strong><br/>
+  <pre>
+{
+  "user_redirects": {
+    "admin": "/projects/redmine/wiki/admin_dashboard",
+    "petr": {
+      "cs": "/projects/redmine/wiki/petr_cs",
+      "en": "/projects/redmine/wiki/petr_en"
+    }
+  },
+  "group_redirects": {
+    "Managers": "/projects/redmine/wiki/manager_dashboard"
+  },
+  "role_redirects": {
+    "Project manager": "/projects/redmine/wiki/pm_dashboard"
+  },
+  "default_redirect": "/projects/redmine/wiki/general_dashboard"
+}
+  </pre>
+</p>
+
+
